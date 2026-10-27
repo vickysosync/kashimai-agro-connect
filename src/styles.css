@@ -37,6 +37,8 @@
   --color-harvest: var(--harvest);
   --color-harvest-foreground: var(--harvest-foreground);
   --color-cream: var(--cream);
+  --color-forest-deep: var(--forest-deep);
+  --color-scrim: var(--scrim);
   --color-light-green: var(--light-green);
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
   --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
@@ -51,6 +53,8 @@
   --harvest: oklch(0.795 0.162 86);        /* Harvest Yellow #EAB308 */
   --cream: oklch(0.978 0.011 95.2);        /* Warm Cream #FAF8F0 */
   --light-green: oklch(0.982 0.018 155.8); /* Light Green Background #F0FDF4 */
+  --forest-deep: oklch(0.393 0.09 152.5);  /* Deep Agricultural Green #14532D */
+  --scrim: oklch(0.18 0.03 150 / 0.92);
 
   /* Semantic tokens */
   --background: var(--cream);
@@ -135,4 +139,11 @@
   .form-label {
     @apply mb-1.5 block text-sm font-medium text-foreground;
   }
+}
+
+@utility bg-overlay-forest {
+  background-image: linear-gradient(90deg, oklch(0.25 0.06 152 / 0.85) 0%, oklch(0.3 0.07 152 / 0.55) 55%, oklch(0.3 0.07 152 / 0.2) 100%);
+}
+@utility bg-caption-fade {
+  background-image: linear-gradient(to top, oklch(0.18 0.04 150 / 0.85), transparent);
 }
